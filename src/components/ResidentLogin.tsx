@@ -3,7 +3,8 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
-import { Recycle, User } from "lucide-react";
+import { User } from "lucide-react";
+import logoImage from "../Logo.png";
 
 interface ResidentLoginProps {
   onLogin: (email: string) => void;
@@ -42,9 +43,9 @@ export function ResidentLogin({ onLogin, onSwitchToStaff }: ResidentLoginProps) 
         {/* Logo/Brand */}
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center p-4 bg-white rounded-full shadow-2xl mb-4">
-            <Recycle className="h-16 w-16 text-primary" />
+            <img src={logoImage} alt="EcoSync Logo" className="h-16 w-16" />
           </div>
-          <h1 className="text-5xl text-white mb-2">EcoCollect</h1>
+          <h1 className="text-5xl text-white mb-2">EcoSync</h1>
           <p className="text-green-100">Smart Waste Management System</p>
         </div>
 

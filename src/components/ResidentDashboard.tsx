@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/
 import { Badge } from "./ui/badge";
 import { Bell, MapPin, Trash2, TruckIcon, Calendar, LogOut, Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import logoImage from "../Logo.png";
 
 interface ResidentDashboardProps {
   userEmail: string;
@@ -86,7 +87,8 @@ export function ResidentDashboard({ userEmail, onLogout, onNavigate }: ResidentD
                 <NavContent />
               </SheetContent>
             </Sheet>
-            <h1 className="text-2xl text-primary">EcoCollect</h1>
+            <img src={logoImage} alt="EcoSync Logo" className="h-8 w-8" />
+            <h1 className="text-2xl text-primary">EcoSync</h1>
           </div>
           <div className="hidden md:flex items-center gap-2">
             <span className="text-sm text-muted-foreground mr-2">{userEmail}</span>

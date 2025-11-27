@@ -5,6 +5,7 @@ import { Label } from "./ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Alert, AlertDescription } from "./ui/alert";
 import { ShieldCheck, ArrowLeft } from "lucide-react";
+import logoImage from "../Logo.png";
 
 interface StaffLoginProps {
   onLogin: (email: string) => void;
@@ -51,6 +52,9 @@ export function StaffLogin({ onLogin, onBackToHome }: StaffLoginProps) {
 
         <Card className="shadow-2xl border-2 border-primary/20">
           <CardHeader className="space-y-1 text-center">
+            <div className="flex justify-center mb-2">
+              <img src={logoImage} alt="EcoSync Logo" className="h-16 w-16" />
+            </div>
             <div className="flex justify-center mb-4">
               <div className="rounded-full bg-primary/10 p-3">
                 <ShieldCheck className="h-12 w-12 text-primary" />
@@ -64,7 +68,7 @@ export function StaffLogin({ onLogin, onBackToHome }: StaffLoginProps) {
           <CardContent className="space-y-4">
             <Alert className="bg-amber-50 border-amber-200">
               <AlertDescription className="text-amber-900 text-sm">
-                Only registered EcoCollect staff members are allowed to access this section.
+                Only registered EcoSync staff members are allowed to access this section.
               </AlertDescription>
             </Alert>
 

@@ -15,6 +15,7 @@ import {
   MapPin,
   BarChart3,
 } from "lucide-react";
+import logoImage from "../Logo.png";
 
 interface EcoSyncAdminDashboardProps {
   userEmail: string;
@@ -73,9 +74,12 @@ export function EcoSyncAdminDashboard({ userEmail, onLogout }: EcoSyncAdminDashb
       {/* Header */}
       <header className="bg-white border-b shadow-sm sticky top-0 z-40">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <h1 className="text-2xl text-primary font-semibold">
-            EcoSync – Smart Waste Management
-          </h1>
+          <div className="flex items-center gap-3">
+            <img src={logoImage} alt="EcoSync Logo" className="h-10 w-10" />
+            <h1 className="text-2xl text-primary font-semibold">
+              EcoSync – Smart Waste Management
+            </h1>
+          </div>
 
           <div className="flex items-center gap-2">
             <span className="text-sm text-muted-foreground mr-2">{userEmail}</span>
